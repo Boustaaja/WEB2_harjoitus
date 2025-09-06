@@ -41,7 +41,25 @@ app.use(function (req, res, next) {
   next();
 });
 
-// GET all users
+// GET a word (eli selaimeen osoiteriville kirjoitetaan vaikka http://localhost:3000/words/auto)
+app.get("/words/:fin", (req, res) => {
+  const finWord = req.params.fin;
+  const word = fs.readFileSync("./sanakirja.txt", {
+    encoding: "utf8",
+    flag: "r",
+  });
+  const splitLines = word.split(/\r?\n/);
+  let found = null;
+  splitLines.forEach((line) => {
+    const words = line.split(" "); //sanat taulukkoon words
+    if (words[0] === finWord) {
+      found = { fin: words[0], eng: words[1] };
+    }
+  });
+  res.json(found ? found : { message: "Not found" });
+});
+
+// GET all words
 app.get("/words", (req, res) => {
   const data = fs.readFileSync("./sanakirja.txt", {
     encoding: "utf8",

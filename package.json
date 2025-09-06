@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/Boustaaja/WEB2_harjoitus/issues"
   },
-  "homepage": "https://github.com/Boustaaja/WEB2_harjoitus#readme"
+  "homepage": "https://github.com/Boustaaja/WEB2_harjoitus#readme",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
 }

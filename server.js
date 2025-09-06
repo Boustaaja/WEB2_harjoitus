@@ -59,6 +59,13 @@ app.get("/words/:fin", (req, res) => {
   res.json(found ? found : { message: "Not found" });
 });
 
+// POST a new word
+app.post("/words", (req, res) => {
+  const { fin, eng } = req.body;
+  fs.appendFileSync("./sanakirja.txt", `${fin} ${eng}\n`);
+  res.json({ message: "Word added" });
+});
+
 // GET all words
 app.get("/words", (req, res) => {
   const data = fs.readFileSync("./sanakirja.txt", {

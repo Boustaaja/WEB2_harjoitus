@@ -13,3 +13,4 @@ sammakko frog
 koira dog
 kissa cat
 kala fish
+Portti Gate

@@ -1,0 +1,22 @@
+{
+  "name": "sanakirja",
+  "version": "1.0.0",
+  "description": "Palautettava harjoitus",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Boustaaja/WEB2_harjoitus.git"
+  },
+  "keywords": [
+    "Rest-api"
+  ],
+  "author": "Katja Kulmala",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Boustaaja/WEB2_harjoitus/issues"
+  },
+  "homepage": "https://github.com/Boustaaja/WEB2_harjoitus#readme"
+}

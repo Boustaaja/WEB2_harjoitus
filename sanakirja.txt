@@ -1,0 +1,15 @@
+auto car
+juusto cheese
+hammasharja toothbrush
+suklaa chocolate
+kesä summer
+kevät spring
+talvi winter
+syksy autumn
+ovi door
+pöytä table
+tuoli chair
+sammakko frog
+koira dog
+kissa cat
+kala fish

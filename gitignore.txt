@@ -1,0 +1,8 @@
+# Editorin ja käyttöjärjestelmän roskaa
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.log
+dist/
+build/

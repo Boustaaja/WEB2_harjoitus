@@ -14,3 +14,9 @@ koira dog
 kissa cat
 kala fish
 Portti Gate
+kissa undefined
+Kissa undefined
+Kissa Cat
+Koira Dog
+hevonen horse
+koi bug

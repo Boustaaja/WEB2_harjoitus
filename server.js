@@ -72,20 +72,14 @@ app.get("/words", (req, res) => {
     encoding: "utf8",
     flag: "r",
   });
-  //data:ssa on nyt koko tiedoston sisältö
-  /*tiedoston sisältö pitää pätkiä ja tehdä taulukko*/
+
   const splitLines = data.split(/\r?\n/);
-  /*Tässä voisi käydä silmukassa läpi splitLines:ssa jokaisen rivin*/
-  splitLines.forEach((line) => {
-    const words = line.split(" "); //sanat taulukkoon words
-    console.log(words);
-    const word = {
-      fin: words[0],
-      eng: words[1],
-    };
-    dictionary.push(word);
-    console.log(dictionary);
-  });
+  const dictionary = splitLines
+    .filter((line) => line.trim() !== "") // poistaa tyhjät rivit
+    .map((line) => {
+      const words = line.trim().split(/\s+/); // splittaa yhdellä tai useammalla välilyönnillä
+      return { fin: words[0], eng: words[1] };
+    });
 
   res.json(dictionary);
 });
